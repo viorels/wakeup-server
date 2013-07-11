@@ -1,7 +1,18 @@
 @(message: String)
 
 @main(message) {
+
+	<script src='@routes.Assets.at("javascripts/index.js")'></script>
+
+	<ul id="challenges"></ul>
     
-    @play20.welcome(message, style = "Java")
+    <form action="@routes.Application.addChallenge()" method="post">
+    <!--
+    	<input name="wakeUpTime">
+    	<input name="startDate">
+    -->
+    	<input name="objective">
+    	<input type="submit">
+    </form>
     
 }
